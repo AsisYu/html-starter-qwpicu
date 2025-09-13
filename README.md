@@ -2,7 +2,7 @@
 
 一个美观现代的个人主页模板，具有响应式设计和互动功能。
 
-![image](docs\image\index.jpeg)
+![image](docs/image/index.jpeg)
 
 ## 文件结构
 

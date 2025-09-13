@@ -908,11 +908,35 @@ a {
 	background: rgba(255, 255, 255, 0.1);
 	border: 1px solid rgba(255, 255, 255, 0.3);
 	border-radius: 50%;
-	color: #fff;
 	text-decoration: none;
 	font-size: 16px;
 	transition: all 0.3s ease;
 	backdrop-filter: blur(10px);
+}
+
+/* 不同图标的默认颜色 */
+.contact-icon:nth-child(1) {
+	color: #12B7F5; /* QQ蓝色 */
+}
+
+.contact-icon:nth-child(2) {
+	color: #09BB07; /* 微信绿色 */
+}
+
+.contact-icon:nth-child(3) {
+	color: #FF6B6B; /* 邮箱红色 */
+}
+
+.contact-icon:nth-child(4) {
+	color: #333333; /* GitHub黑色 */
+}
+
+.contact-icon:nth-child(5) {
+	color: #00A1D6; /* 哔哩哔哩蓝色 */
+}
+
+.contact-icon:nth-child(6) {
+	color: #E6162D; /* 微博红色 */
 }
 
 .contact-icon:hover {
@@ -974,39 +998,45 @@ a {
 
 /* 不同图标的悬停颜色 */
 .contact-icon:nth-child(1):hover {
-	background: rgba(18, 183, 245, 0.3);
-	border-color: rgba(18, 183, 245, 0.6);
-	box-shadow: 0 8px 25px rgba(18, 183, 245, 0.3);
+	color: #0A9FD4;
+	background: rgba(18, 183, 245, 0.25);
+	border-color: rgba(18, 183, 245, 0.7);
+	box-shadow: 0 8px 25px rgba(18, 183, 245, 0.4);
 }
 
 .contact-icon:nth-child(2):hover {
-	background: rgba(9, 187, 7, 0.3);
-	border-color: rgba(9, 187, 7, 0.6);
-	box-shadow: 0 8px 25px rgba(9, 187, 7, 0.3);
+	color: #07A507;
+	background: rgba(9, 187, 7, 0.25);
+	border-color: rgba(9, 187, 7, 0.7);
+	box-shadow: 0 8px 25px rgba(9, 187, 7, 0.4);
 }
 
 .contact-icon:nth-child(3):hover {
-	background: rgba(255, 107, 107, 0.3);
-	border-color: rgba(255, 107, 107, 0.6);
-	box-shadow: 0 8px 25px rgba(255, 107, 107, 0.3);
+	color: #FF5252;
+	background: rgba(255, 107, 107, 0.25);
+	border-color: rgba(255, 107, 107, 0.7);
+	box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4);
 }
 
 .contact-icon:nth-child(4):hover {
-	background: rgba(51, 51, 51, 0.3);
-	border-color: rgba(51, 51, 51, 0.6);
-	box-shadow: 0 8px 25px rgba(51, 51, 51, 0.3);
+	color: #1A1A1A;
+	background: rgba(51, 51, 51, 0.25);
+	border-color: rgba(51, 51, 51, 0.7);
+	box-shadow: 0 8px 25px rgba(51, 51, 51, 0.4);
 }
 
 .contact-icon:nth-child(5):hover {
-	background: rgba(0, 161, 214, 0.3);
-	border-color: rgba(0, 161, 214, 0.6);
-	box-shadow: 0 8px 25px rgba(0, 161, 214, 0.3);
+	color: #0088CC;
+	background: rgba(0, 161, 214, 0.25);
+	border-color: rgba(0, 161, 214, 0.7);
+	box-shadow: 0 8px 25px rgba(0, 161, 214, 0.4);
 }
 
 .contact-icon:nth-child(6):hover {
-	background: rgba(230, 22, 45, 0.3);
-	border-color: rgba(230, 22, 45, 0.6);
-	box-shadow: 0 8px 25px rgba(230, 22, 45, 0.3);
+	color: #D91A2A;
+	background: rgba(230, 22, 45, 0.25);
+	border-color: rgba(230, 22, 45, 0.7);
+	box-shadow: 0 8px 25px rgba(230, 22, 45, 0.4);
 }
 
 /* 时钟颜色动画关键帧 - 与JavaScript时钟颜色同步 */
@@ -1075,6 +1105,54 @@ a {
 	animation-play-state: paused;
 }
 
+/* 一言文字高亮效果 */
+.highlight-red {
+	color: #ff6b6b;
+	text-shadow: 
+		0 0 5px rgba(255, 107, 107, 0.8),
+		0 0 10px rgba(255, 107, 107, 0.6),
+		0 0 15px rgba(255, 107, 107, 0.4),
+		0 0 20px rgba(255, 107, 107, 0.2);
+	filter: blur(0.3px);
+	transition: all 0.3s ease;
+	position: relative;
+}
+
+.highlight-green {
+	color: #2ed573;
+	text-shadow: 
+		0 0 5px rgba(46, 213, 115, 0.8),
+		0 0 10px rgba(46, 213, 115, 0.6),
+		0 0 15px rgba(46, 213, 115, 0.4),
+		0 0 20px rgba(46, 213, 115, 0.2);
+	filter: blur(0.3px);
+	transition: all 0.3s ease;
+	position: relative;
+}
+
+/* 悬停效果增强 */
+.highlight-red:hover {
+	color: #ff5252;
+	text-shadow: 
+		0 0 8px rgba(255, 82, 82, 1),
+		0 0 16px rgba(255, 82, 82, 0.8),
+		0 0 24px rgba(255, 82, 82, 0.6),
+		0 0 32px rgba(255, 82, 82, 0.4);
+	filter: blur(0.5px);
+	transform: scale(1.05);
+}
+
+.highlight-green:hover {
+	color: #1dd1a1;
+	text-shadow: 
+		0 0 8px rgba(29, 209, 161, 1),
+		0 0 16px rgba(29, 209, 161, 0.8),
+		0 0 24px rgba(29, 209, 161, 0.6),
+		0 0 32px rgba(29, 209, 161, 0.4);
+	filter: blur(0.5px);
+	transform: scale(1.05);
+}
+
 /* 响应式设计 */
 @media screen and (max-width: 768px) {
 	.contact-icons-container {
@@ -1097,6 +1175,15 @@ a {
 	#canvas {
 		border-width: 1px;
 		border-radius: 10px;
+	}
+	
+	/* 移动端文字高亮效果调整 */
+	.highlight-red, .highlight-green {
+		filter: blur(0.2px);
+		text-shadow: 
+			0 0 3px currentColor,
+			0 0 6px currentColor,
+			0 0 9px currentColor;
 	}
 }
 

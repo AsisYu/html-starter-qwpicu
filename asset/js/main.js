@@ -35,6 +35,90 @@ var iUp = (function () {
 	}
 })();
 yiyan = "";
+
+// 文字高亮处理函数
+function processTextWithHighlights(text) {
+	// 定义需要高亮的文字和对应的样式类
+	var highlightRules = [
+		{ word: '明确', class: 'highlight-red' },
+		{ word: '和', class: 'highlight-green' },
+		{ word: '梦想', class: 'highlight-red' },
+		{ word: '希望', class: 'highlight-green' },
+		{ word: '爱', class: 'highlight-red' },
+		{ word: '美', class: 'highlight-green' },
+		{ word: '真', class: 'highlight-red' },
+		{ word: '善', class: 'highlight-green' },
+		{ word: '自由', class: 'highlight-red' },
+		{ word: '快乐', class: 'highlight-green' },
+		{ word: '幸福', class: 'highlight-red' },
+		{ word: '成功', class: 'highlight-green' },
+		{ word: '努力', class: 'highlight-red' },
+		{ word: '坚持', class: 'highlight-green' },
+		{ word: '勇气', class: 'highlight-red' },
+		{ word: '智慧', class: 'highlight-green' }
+	];
+	
+	var processedText = text;
+	
+	// 应用高亮规则
+	highlightRules.forEach(function(rule) {
+		var regex = new RegExp(rule.word, 'g');
+		processedText = processedText.replace(regex, '<span class="' + rule.class + '">' + rule.word + '</span>');
+	});
+	
+	// 随机高亮方案：根据字符长度随机选择字符进行高亮
+	var randomHighlightedText = addRandomHighlights(processedText);
+	
+	return randomHighlightedText;
+}
+
+// 随机高亮函数
+function addRandomHighlights(text) {
+	// 移除已有的HTML标签，只处理纯文本
+	var cleanText = text.replace(/<[^>]*>/g, '');
+	var textLength = cleanText.length;
+	
+	// 根据文本长度决定随机高亮的字符数量
+	var highlightCount;
+	if (textLength <= 10) {
+		highlightCount = Math.floor(textLength * 0.3); // 30%的字符
+	} else if (textLength <= 20) {
+		highlightCount = Math.floor(textLength * 0.25); // 25%的字符
+	} else {
+		highlightCount = Math.floor(textLength * 0.2); // 20%的字符
+	}
+	
+	// 确保至少高亮1个字符，最多不超过文本长度的一半
+	highlightCount = Math.max(1, Math.min(highlightCount, Math.floor(textLength / 2)));
+	
+	// 生成随机索引数组
+	var randomIndexes = [];
+	while (randomIndexes.length < highlightCount) {
+		var randomIndex = Math.floor(Math.random() * textLength);
+		// 避免重复索引，并且跳过标点符号和空格
+		if (randomIndexes.indexOf(randomIndex) === -1 && 
+			!/[\s\p{P}]/u.test(cleanText[randomIndex])) {
+			randomIndexes.push(randomIndex);
+		}
+	}
+	
+	// 对随机索引进行排序，确保从后往前替换
+	randomIndexes.sort(function(a, b) { return b - a; });
+	
+	// 创建结果数组
+	var result = cleanText.split('');
+	
+	// 为随机选中的字符添加高亮
+	randomIndexes.forEach(function(index) {
+		var char = result[index];
+		// 随机选择红色或绿色高亮
+		var highlightClass = Math.random() < 0.5 ? 'highlight-red' : 'highlight-green';
+		result[index] = '<span class="' + highlightClass + '">' + char + '</span>';
+	});
+	
+	return result.join('');
+}
+
 $(document).ready(function () {
 
 	// 获取一言数据
@@ -42,7 +126,9 @@ $(document).ready(function () {
 		return res.json();
 	}).then(function (e) {
 		yiyan = e.hitokoto;
-		$('#description').html(e.hitokoto + "<br/> -「<strong>" + e.from + "</strong>」")
+		// 处理一言文字，添加高亮效果
+		var processedHitokoto = processTextWithHighlights(e.hitokoto);
+		$('#description').html(processedHitokoto + "<br/> -「<strong>" + e.from + "</strong>」")
 	}).catch(function (err) {
 		console.error(err);
 	})

@@ -1,3 +1,11 @@
+/*
+	HTML Starter Template - Clock Animation JavaScript
+	Original Source: https://github.com/AsisYu/html-starter-qwpicu.git
+	License: Open Source
+	Author: AsisYu
+	Description: Animated clock display functionality
+*/
+
 (function () {
   var t = 820;
   var a = 250;

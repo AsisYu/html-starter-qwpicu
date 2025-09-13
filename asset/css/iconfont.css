@@ -1,3 +1,11 @@
+/*
+	HTML Starter Template - Icon Font CSS
+	Original Source: https://github.com/AsisYu/html-starter-qwpicu.git
+	License: Open Source
+	Author: AsisYu
+	Description: Custom icon font definitions and styles
+*/
+
 @font-face {font-family: "iconfont";
   src: url('//at.alicdn.com/t/font_1923666_2o4ez0t5t64.eot?t=1597068283360'); /* IE9 */
   src: url('//at.alicdn.com/t/font_1923666_2o4ez0t5t64.eot?t=1597068283360#iefix') format('embedded-opentype'), /* IE6-IE8 */

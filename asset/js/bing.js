@@ -1,3 +1,11 @@
+/*
+	HTML Starter Template - Bing Wallpaper JavaScript
+	Original Source: https://github.com/AsisYu/html-starter-qwpicu.git
+	License: Open Source
+	Author: AsisYu
+	Description: Bing wallpaper API integration for background images
+*/
+
 const https = require('https')
 const fs = require('fs')
 

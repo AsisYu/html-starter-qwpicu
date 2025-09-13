@@ -1,3 +1,11 @@
+/*
+	HTML Starter Template - Main JavaScript
+	Original Source: https://github.com/AsisYu/html-starter-qwpicu.git
+	License: Open Source
+	Author: AsisYu
+	Description: Main JavaScript functionality for the personal homepage template
+*/
+
 var iUp = (function () {
 	var t = 0,
 		d = 150,

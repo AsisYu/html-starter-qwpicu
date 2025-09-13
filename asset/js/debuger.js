@@ -1,4 +1,12 @@
 
+/*
+	HTML Starter Template - Developer Tools Detection JavaScript
+	Original Source: https://github.com/AsisYu/html-starter-qwpicu.git
+	License: Open Source
+	Author: AsisYu
+	Description: Developer tools detection and redirection functionality
+*/
+
 let devToolsOpen = false;
         function detectDevTool() {
             const threshold = 160;

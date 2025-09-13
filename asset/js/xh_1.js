@@ -1,3 +1,11 @@
+/*
+	HTML Starter Template - Snow Effect JavaScript
+	Original Source: https://github.com/AsisYu/html-starter-qwpicu.git
+	License: Open Source
+	Author: AsisYu
+	Description: Snow animation effect for winter theme
+*/
+
 //创建雪花元素
 function snow() {
     //获取视窗的宽高

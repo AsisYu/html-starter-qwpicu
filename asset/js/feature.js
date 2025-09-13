@@ -1,3 +1,11 @@
+/*
+	HTML Starter Template - Feature JavaScript
+	Original Source: https://github.com/AsisYu/html-starter-qwpicu.git
+	License: Open Source
+	Author: AsisYu
+	Description: Page feature enhancements and mobile optimizations
+*/
+
 // 每次访问清除缓存
 window.onpageshow = function (event) {
   if (event.persisted) {

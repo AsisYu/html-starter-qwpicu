@@ -1,11 +1,16 @@
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,900");
-@import url("fontawesome-all.min.css");
-
 /*
-	Aerial by HTML5 UP
+	HTML Starter Template - Main CSS
+	Original Source: https://github.com/AsisYu/html-starter-qwpicu.git
+	License: Open Source
+	Author: AsisYu
+	Description: Main stylesheet for the personal homepage template
+	
+	Based on Aerial by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,900");
+@import url("fontawesome-all.min.css");
 
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,

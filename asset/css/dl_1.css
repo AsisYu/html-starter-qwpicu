@@ -1,4 +1,12 @@
- .deng-box {
+ /*
+	HTML Starter Template - Decorative Lantern CSS
+	Original Source: https://github.com/AsisYu/html-starter-qwpicu.git
+	License: Open Source
+	Author: AsisYu
+	Description: Decorative lantern animation styles
+*/
+
+.deng-box {
      position: fixed;
      top: -40px;
      right: 150px;

@@ -710,6 +710,319 @@ a {
 #footer p {
 	margin: 30px;
 }
+
+/* 药丸形状按钮样式 */
+.pill-buttons-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+	margin: 30px 0;
+	flex-wrap: wrap;
+}
+
+.pill-button {
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 8px 20px;
+	background: transparent;
+	border: 2px solid rgba(255, 255, 255, 0.8);
+	border-radius: 20px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	overflow: visible;
+	min-width: 90px;
+	height: 36px;
+	z-index: 1;
+	text-decoration: none;
+	color: inherit;
+}
+
+.pill-button-text {
+	color: #fff;
+	font-size: 16px;
+	font-weight: 400;
+	letter-spacing: 0.5px;
+	transition: all 0.3s ease;
+	z-index: 2;
+	position: relative;
+}
+
+.pill-button-decor {
+	position: absolute;
+	width: 16px;
+	height: 6px;
+	transition: all 0.3s ease;
+	z-index: 10;
+	border-radius: 3px;
+}
+
+/* 第一个按钮 - 红色系 */
+.pill-button:nth-child(1) .pill-left {
+	top: 6px;
+	left: -8px;
+	background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+}
+
+.pill-button:nth-child(1) .pill-right {
+	bottom: 6px;
+	right: -8px;
+	background: linear-gradient(45deg, #ff4757, #ff6b9d);
+}
+
+/* 第二个按钮 - 蓝色系 */
+.pill-button:nth-child(2) .pill-left {
+	top: 6px;
+	left: -8px;
+	background: linear-gradient(45deg, #3742fa, #5352ed);
+}
+
+.pill-button:nth-child(2) .pill-right {
+	bottom: 6px;
+	right: -8px;
+	background: linear-gradient(45deg, #2f3542, #57606f);
+}
+
+/* 第三个按钮 - 绿色系 */
+.pill-button:nth-child(3) .pill-left {
+	top: 6px;
+	left: -8px;
+	background: linear-gradient(45deg, #2ed573, #7bed9f);
+}
+
+.pill-button:nth-child(3) .pill-right {
+	bottom: 6px;
+	right: -8px;
+	background: linear-gradient(45deg, #1e90ff, #70a1ff);
+}
+
+/* 第四个按钮 - 紫色系 */
+.pill-button:nth-child(4) .pill-left {
+	top: 6px;
+	left: -8px;
+	background: linear-gradient(45deg, #a55eea, #c44569);
+}
+
+.pill-button:nth-child(4) .pill-right {
+	bottom: 6px;
+	right: -8px;
+	background: linear-gradient(45deg, #f368e0, #ff9ff3);
+}
+
+/* 悬停效果 */
+.pill-button:hover {
+	transform: scale(1.1);
+	border-color: rgba(255, 255, 255, 1);
+	box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+/* 第一个按钮 - 红色系磨砂背景 */
+.pill-button:nth-child(1):hover {
+	background: radial-gradient(circle at center, rgba(255, 107, 107, 0.15) 0%, rgba(255, 142, 142, 0.1) 40%, rgba(255, 107, 107, 0.05) 70%, transparent 100%);
+	backdrop-filter: blur(10px);
+	box-shadow: 0 0 30px rgba(255, 107, 107, 0.4), 0 0 60px rgba(255, 107, 107, 0.2);
+}
+
+/* 第二个按钮 - 蓝色系磨砂背景 */
+.pill-button:nth-child(2):hover {
+	background: radial-gradient(circle at center, rgba(55, 66, 250, 0.15) 0%, rgba(83, 82, 237, 0.1) 40%, rgba(55, 66, 250, 0.05) 70%, transparent 100%);
+	backdrop-filter: blur(10px);
+	box-shadow: 0 0 30px rgba(55, 66, 250, 0.4), 0 0 60px rgba(55, 66, 250, 0.2);
+}
+
+/* 第三个按钮 - 绿色系磨砂背景 */
+.pill-button:nth-child(3):hover {
+	background: radial-gradient(circle at center, rgba(46, 213, 115, 0.15) 0%, rgba(123, 237, 159, 0.1) 40%, rgba(46, 213, 115, 0.05) 70%, transparent 100%);
+	backdrop-filter: blur(10px);
+	box-shadow: 0 0 30px rgba(46, 213, 115, 0.4), 0 0 60px rgba(46, 213, 115, 0.2);
+}
+
+/* 第四个按钮 - 紫色系磨砂背景 */
+.pill-button:nth-child(4):hover {
+	background: radial-gradient(circle at center, rgba(165, 94, 234, 0.15) 0%, rgba(196, 69, 105, 0.1) 40%, rgba(165, 94, 234, 0.05) 70%, transparent 100%);
+	backdrop-filter: blur(10px);
+	box-shadow: 0 0 30px rgba(165, 94, 234, 0.4), 0 0 60px rgba(165, 94, 234, 0.2);
+}
+
+.pill-button:hover .pill-button-text {
+	font-size: 18px;
+	font-weight: 500;
+}
+
+.pill-button:hover .pill-left {
+	left: -16px;
+	transform: translateX(-8px);
+}
+
+.pill-button:hover .pill-right {
+	right: -16px;
+	transform: translateX(8px);
+}
+
+/* 响应式设计 */
+@media screen and (max-width: 768px) {
+	.pill-buttons-container {
+		gap: 15px;
+		margin: 20px 0;
+	}
+	
+	.pill-button {
+		padding: 6px 16px;
+		min-width: 70px;
+		height: 32px;
+	}
+	
+	.pill-button-text {
+		font-size: 14px;
+	}
+	
+	.pill-button:hover .pill-button-text {
+		font-size: 16px;
+	}
+}
+
+/* 联系方式图标样式 */
+.contact-icons-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+	margin: 25px 0;
+	flex-wrap: wrap;
+}
+
+.contact-icon {
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 40px;
+	height: 40px;
+	background: rgba(255, 255, 255, 0.1);
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	border-radius: 50%;
+	color: #fff;
+	text-decoration: none;
+	font-size: 16px;
+	transition: all 0.3s ease;
+	backdrop-filter: blur(10px);
+}
+
+.contact-icon:hover {
+	background: rgba(255, 255, 255, 0.2);
+	border-color: rgba(255, 255, 255, 0.6);
+	transform: translateY(-3px) scale(1.1);
+	box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
+}
+
+.contact-icon i {
+	transition: all 0.3s ease;
+}
+
+.contact-icon:hover i {
+	transform: scale(1.2);
+}
+
+/* 微信图标特殊处理 */
+.wechat-icon {
+	position: relative;
+}
+
+.wechat-qr {
+	position: absolute;
+	bottom: 60px;
+	left: 50%;
+	transform: translateX(-50%);
+	background: #fff;
+	padding: 10px;
+	border-radius: 10px;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.3s ease;
+	z-index: 100;
+}
+
+.wechat-qr img {
+	width: 100px;
+	height: 100px;
+	display: block;
+}
+
+.wechat-icon:hover .wechat-qr {
+	opacity: 1;
+	visibility: visible;
+	transform: translateX(-50%) translateY(-10px);
+}
+
+.wechat-qr::after {
+	content: '';
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	transform: translateX(-50%);
+	border: 8px solid transparent;
+	border-top-color: #fff;
+}
+
+/* 不同图标的悬停颜色 */
+.contact-icon:nth-child(1):hover {
+	background: rgba(18, 183, 245, 0.3);
+	border-color: rgba(18, 183, 245, 0.6);
+	box-shadow: 0 8px 25px rgba(18, 183, 245, 0.3);
+}
+
+.contact-icon:nth-child(2):hover {
+	background: rgba(9, 187, 7, 0.3);
+	border-color: rgba(9, 187, 7, 0.6);
+	box-shadow: 0 8px 25px rgba(9, 187, 7, 0.3);
+}
+
+.contact-icon:nth-child(3):hover {
+	background: rgba(255, 107, 107, 0.3);
+	border-color: rgba(255, 107, 107, 0.6);
+	box-shadow: 0 8px 25px rgba(255, 107, 107, 0.3);
+}
+
+.contact-icon:nth-child(4):hover {
+	background: rgba(51, 51, 51, 0.3);
+	border-color: rgba(51, 51, 51, 0.6);
+	box-shadow: 0 8px 25px rgba(51, 51, 51, 0.3);
+}
+
+.contact-icon:nth-child(5):hover {
+	background: rgba(0, 161, 214, 0.3);
+	border-color: rgba(0, 161, 214, 0.6);
+	box-shadow: 0 8px 25px rgba(0, 161, 214, 0.3);
+}
+
+.contact-icon:nth-child(6):hover {
+	background: rgba(230, 22, 45, 0.3);
+	border-color: rgba(230, 22, 45, 0.6);
+	box-shadow: 0 8px 25px rgba(230, 22, 45, 0.3);
+}
+
+/* 响应式设计 */
+@media screen and (max-width: 768px) {
+	.contact-icons-container {
+		gap: 12px;
+		margin: 15px 0;
+	}
+	
+	.contact-icon {
+		width: 35px;
+		height: 35px;
+		font-size: 14px;
+	}
+	
+	.wechat-qr img {
+		width: 80px;
+		height: 80px;
+	}
+}
+
 /* Wide */
 
 @media screen and (max-width: 1680px) {

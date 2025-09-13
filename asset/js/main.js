@@ -42,20 +42,34 @@ function processTextWithHighlights(text) {
 	var highlightRules = [
 		{ word: '明确', class: 'highlight-red' },
 		{ word: '和', class: 'highlight-green' },
-		{ word: '梦想', class: 'highlight-red' },
-		{ word: '希望', class: 'highlight-green' },
-		{ word: '爱', class: 'highlight-red' },
-		{ word: '美', class: 'highlight-green' },
-		{ word: '真', class: 'highlight-red' },
-		{ word: '善', class: 'highlight-green' },
+		{ word: '梦想', class: 'highlight-blue' },
+		{ word: '希望', class: 'highlight-purple' },
+		{ word: '爱', class: 'highlight-pink' },
+		{ word: '美', class: 'highlight-cyan' },
+		{ word: '真', class: 'highlight-yellow' },
+		{ word: '善', class: 'highlight-orange' },
 		{ word: '自由', class: 'highlight-red' },
 		{ word: '快乐', class: 'highlight-green' },
-		{ word: '幸福', class: 'highlight-red' },
-		{ word: '成功', class: 'highlight-green' },
-		{ word: '努力', class: 'highlight-red' },
-		{ word: '坚持', class: 'highlight-green' },
-		{ word: '勇气', class: 'highlight-red' },
-		{ word: '智慧', class: 'highlight-green' }
+		{ word: '幸福', class: 'highlight-blue' },
+		{ word: '成功', class: 'highlight-purple' },
+		{ word: '努力', class: 'highlight-pink' },
+		{ word: '坚持', class: 'highlight-cyan' },
+		{ word: '勇气', class: 'highlight-yellow' },
+		{ word: '智慧', class: 'highlight-orange' },
+		{ word: '时间', class: 'highlight-red' },
+		{ word: '生命', class: 'highlight-green' },
+		{ word: '青春', class: 'highlight-blue' },
+		{ word: '未来', class: 'highlight-purple' },
+		{ word: '过去', class: 'highlight-pink' },
+		{ word: '现在', class: 'highlight-cyan' },
+		{ word: '朋友', class: 'highlight-yellow' },
+		{ word: '家人', class: 'highlight-orange' },
+		{ word: '学习', class: 'highlight-red' },
+		{ word: '成长', class: 'highlight-green' },
+		{ word: '改变', class: 'highlight-blue' },
+		{ word: '选择', class: 'highlight-purple' },
+		{ word: '决定', class: 'highlight-pink' },
+		{ word: '思考', class: 'highlight-cyan' }
 	];
 	
 	var processedText = text;
@@ -111,8 +125,13 @@ function addRandomHighlights(text) {
 	// 为随机选中的字符添加高亮
 	randomIndexes.forEach(function(index) {
 		var char = result[index];
-		// 随机选择红色或绿色高亮
-		var highlightClass = Math.random() < 0.5 ? 'highlight-red' : 'highlight-green';
+		// 从8种颜色中随机选择高亮
+		var highlightClasses = [
+			'highlight-red', 'highlight-green', 'highlight-blue', 'highlight-purple',
+			'highlight-orange', 'highlight-cyan', 'highlight-pink', 'highlight-yellow'
+		];
+		var randomClassIndex = Math.floor(Math.random() * highlightClasses.length);
+		var highlightClass = highlightClasses[randomClassIndex];
 		result[index] = '<span class="' + highlightClass + '">' + char + '</span>';
 	});
 	

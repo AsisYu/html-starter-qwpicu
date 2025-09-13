@@ -1130,6 +1130,78 @@ a {
 	position: relative;
 }
 
+.highlight-blue {
+	color: #3742fa;
+	text-shadow: 
+		0 0 5px rgba(55, 66, 250, 0.8),
+		0 0 10px rgba(55, 66, 250, 0.6),
+		0 0 15px rgba(55, 66, 250, 0.4),
+		0 0 20px rgba(55, 66, 250, 0.2);
+	filter: blur(0.3px);
+	transition: all 0.3s ease;
+	position: relative;
+}
+
+.highlight-purple {
+	color: #a55eea;
+	text-shadow: 
+		0 0 5px rgba(165, 94, 234, 0.8),
+		0 0 10px rgba(165, 94, 234, 0.6),
+		0 0 15px rgba(165, 94, 234, 0.4),
+		0 0 20px rgba(165, 94, 234, 0.2);
+	filter: blur(0.3px);
+	transition: all 0.3s ease;
+	position: relative;
+}
+
+.highlight-orange {
+	color: #ffa502;
+	text-shadow: 
+		0 0 5px rgba(255, 165, 2, 0.8),
+		0 0 10px rgba(255, 165, 2, 0.6),
+		0 0 15px rgba(255, 165, 2, 0.4),
+		0 0 20px rgba(255, 165, 2, 0.2);
+	filter: blur(0.3px);
+	transition: all 0.3s ease;
+	position: relative;
+}
+
+.highlight-cyan {
+	color: #26d0ce;
+	text-shadow: 
+		0 0 5px rgba(38, 208, 206, 0.8),
+		0 0 10px rgba(38, 208, 206, 0.6),
+		0 0 15px rgba(38, 208, 206, 0.4),
+		0 0 20px rgba(38, 208, 206, 0.2);
+	filter: blur(0.3px);
+	transition: all 0.3s ease;
+	position: relative;
+}
+
+.highlight-pink {
+	color: #ff9ff3;
+	text-shadow: 
+		0 0 5px rgba(255, 159, 243, 0.8),
+		0 0 10px rgba(255, 159, 243, 0.6),
+		0 0 15px rgba(255, 159, 243, 0.4),
+		0 0 20px rgba(255, 159, 243, 0.2);
+	filter: blur(0.3px);
+	transition: all 0.3s ease;
+	position: relative;
+}
+
+.highlight-yellow {
+	color: #feca57;
+	text-shadow: 
+		0 0 5px rgba(254, 202, 87, 0.8),
+		0 0 10px rgba(254, 202, 87, 0.6),
+		0 0 15px rgba(254, 202, 87, 0.4),
+		0 0 20px rgba(254, 202, 87, 0.2);
+	filter: blur(0.3px);
+	transition: all 0.3s ease;
+	position: relative;
+}
+
 /* 悬停效果增强 */
 .highlight-red:hover {
 	color: #ff5252;
@@ -1149,6 +1221,72 @@ a {
 		0 0 16px rgba(29, 209, 161, 0.8),
 		0 0 24px rgba(29, 209, 161, 0.6),
 		0 0 32px rgba(29, 209, 161, 0.4);
+	filter: blur(0.5px);
+	transform: scale(1.05);
+}
+
+.highlight-blue:hover {
+	color: #2f3542;
+	text-shadow: 
+		0 0 8px rgba(47, 53, 66, 1),
+		0 0 16px rgba(47, 53, 66, 0.8),
+		0 0 24px rgba(47, 53, 66, 0.6),
+		0 0 32px rgba(47, 53, 66, 0.4);
+	filter: blur(0.5px);
+	transform: scale(1.05);
+}
+
+.highlight-purple:hover {
+	color: #8e44ad;
+	text-shadow: 
+		0 0 8px rgba(142, 68, 173, 1),
+		0 0 16px rgba(142, 68, 173, 0.8),
+		0 0 24px rgba(142, 68, 173, 0.6),
+		0 0 32px rgba(142, 68, 173, 0.4);
+	filter: blur(0.5px);
+	transform: scale(1.05);
+}
+
+.highlight-orange:hover {
+	color: #ff6348;
+	text-shadow: 
+		0 0 8px rgba(255, 99, 72, 1),
+		0 0 16px rgba(255, 99, 72, 0.8),
+		0 0 24px rgba(255, 99, 72, 0.6),
+		0 0 32px rgba(255, 99, 72, 0.4);
+	filter: blur(0.5px);
+	transform: scale(1.05);
+}
+
+.highlight-cyan:hover {
+	color: #00d2d3;
+	text-shadow: 
+		0 0 8px rgba(0, 210, 211, 1),
+		0 0 16px rgba(0, 210, 211, 0.8),
+		0 0 24px rgba(0, 210, 211, 0.6),
+		0 0 32px rgba(0, 210, 211, 0.4);
+	filter: blur(0.5px);
+	transform: scale(1.05);
+}
+
+.highlight-pink:hover {
+	color: #ff6b9d;
+	text-shadow: 
+		0 0 8px rgba(255, 107, 157, 1),
+		0 0 16px rgba(255, 107, 157, 0.8),
+		0 0 24px rgba(255, 107, 157, 0.6),
+		0 0 32px rgba(255, 107, 157, 0.4);
+	filter: blur(0.5px);
+	transform: scale(1.05);
+}
+
+.highlight-yellow:hover {
+	color: #ff9f43;
+	text-shadow: 
+		0 0 8px rgba(255, 159, 67, 1),
+		0 0 16px rgba(255, 159, 67, 0.8),
+		0 0 24px rgba(255, 159, 67, 0.6),
+		0 0 32px rgba(255, 159, 67, 0.4);
 	filter: blur(0.5px);
 	transform: scale(1.05);
 }
@@ -1178,7 +1316,8 @@ a {
 	}
 	
 	/* 移动端文字高亮效果调整 */
-	.highlight-red, .highlight-green {
+	.highlight-red, .highlight-green, .highlight-blue, .highlight-purple, 
+	.highlight-orange, .highlight-cyan, .highlight-pink, .highlight-yellow {
 		filter: blur(0.2px);
 		text-shadow: 
 			0 0 3px currentColor,

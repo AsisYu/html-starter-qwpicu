@@ -1009,6 +1009,72 @@ a {
 	box-shadow: 0 8px 25px rgba(230, 22, 45, 0.3);
 }
 
+/* 时钟颜色动画关键帧 - 与JavaScript时钟颜色同步 */
+@keyframes clockBorderColor {
+	0% { border-color: rgba(255, 255, 255, 0.4); box-shadow-color: rgba(255, 255, 255, 0.2); }
+	6.67% { border-color: rgba(255, 107, 107, 0.4); box-shadow-color: rgba(255, 107, 107, 0.2); }
+	13.33% { border-color: rgba(78, 205, 196, 0.4); box-shadow-color: rgba(78, 205, 196, 0.2); }
+	20% { border-color: rgba(69, 183, 209, 0.4); box-shadow-color: rgba(69, 183, 209, 0.2); }
+	26.67% { border-color: rgba(150, 206, 180, 0.4); box-shadow-color: rgba(150, 206, 180, 0.2); }
+	33.33% { border-color: rgba(255, 234, 167, 0.4); box-shadow-color: rgba(255, 234, 167, 0.2); }
+	40% { border-color: rgba(221, 160, 221, 0.4); box-shadow-color: rgba(221, 160, 221, 0.2); }
+	46.67% { border-color: rgba(152, 216, 200, 0.4); box-shadow-color: rgba(152, 216, 200, 0.2); }
+	53.33% { border-color: rgba(247, 220, 111, 0.4); box-shadow-color: rgba(247, 220, 111, 0.2); }
+	60% { border-color: rgba(187, 143, 206, 0.4); box-shadow-color: rgba(187, 143, 206, 0.2); }
+	66.67% { border-color: rgba(133, 193, 233, 0.4); box-shadow-color: rgba(133, 193, 233, 0.2); }
+	73.33% { border-color: rgba(248, 196, 113, 0.4); box-shadow-color: rgba(248, 196, 113, 0.2); }
+	80% { border-color: rgba(130, 224, 170, 0.4); box-shadow-color: rgba(130, 224, 170, 0.2); }
+	86.67% { border-color: rgba(241, 148, 138, 0.4); box-shadow-color: rgba(241, 148, 138, 0.2); }
+	93.33% { border-color: rgba(215, 189, 226, 0.4); box-shadow-color: rgba(215, 189, 226, 0.2); }
+	100% { border-color: rgba(255, 255, 255, 0.4); box-shadow-color: rgba(255, 255, 255, 0.2); }
+}
+
+@keyframes clockBackgroundColor {
+	0% { background: radial-gradient(circle at center, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.08) 50%, rgba(255, 255, 255, 0.03) 100%); }
+	6.67% { background: radial-gradient(circle at center, rgba(255, 107, 107, 0.15) 0%, rgba(255, 107, 107, 0.08) 50%, rgba(255, 107, 107, 0.03) 100%); }
+	13.33% { background: radial-gradient(circle at center, rgba(78, 205, 196, 0.15) 0%, rgba(78, 205, 196, 0.08) 50%, rgba(78, 205, 196, 0.03) 100%); }
+	20% { background: radial-gradient(circle at center, rgba(69, 183, 209, 0.15) 0%, rgba(69, 183, 209, 0.08) 50%, rgba(69, 183, 209, 0.03) 100%); }
+	26.67% { background: radial-gradient(circle at center, rgba(150, 206, 180, 0.15) 0%, rgba(150, 206, 180, 0.08) 50%, rgba(150, 206, 180, 0.03) 100%); }
+	33.33% { background: radial-gradient(circle at center, rgba(255, 234, 167, 0.15) 0%, rgba(255, 234, 167, 0.08) 50%, rgba(255, 234, 167, 0.03) 100%); }
+	40% { background: radial-gradient(circle at center, rgba(221, 160, 221, 0.15) 0%, rgba(221, 160, 221, 0.08) 50%, rgba(221, 160, 221, 0.03) 100%); }
+	46.67% { background: radial-gradient(circle at center, rgba(152, 216, 200, 0.15) 0%, rgba(152, 216, 200, 0.08) 50%, rgba(152, 216, 200, 0.03) 100%); }
+	53.33% { background: radial-gradient(circle at center, rgba(247, 220, 111, 0.15) 0%, rgba(247, 220, 111, 0.08) 50%, rgba(247, 220, 111, 0.03) 100%); }
+	60% { background: radial-gradient(circle at center, rgba(187, 143, 206, 0.15) 0%, rgba(187, 143, 206, 0.08) 50%, rgba(187, 143, 206, 0.03) 100%); }
+	66.67% { background: radial-gradient(circle at center, rgba(133, 193, 233, 0.15) 0%, rgba(133, 193, 233, 0.08) 50%, rgba(133, 193, 233, 0.03) 100%); }
+	73.33% { background: radial-gradient(circle at center, rgba(248, 196, 113, 0.15) 0%, rgba(248, 196, 113, 0.08) 50%, rgba(248, 196, 113, 0.03) 100%); }
+	80% { background: radial-gradient(circle at center, rgba(130, 224, 170, 0.15) 0%, rgba(130, 224, 170, 0.08) 50%, rgba(130, 224, 170, 0.03) 100%); }
+	86.67% { background: radial-gradient(circle at center, rgba(241, 148, 138, 0.15) 0%, rgba(241, 148, 138, 0.08) 50%, rgba(241, 148, 138, 0.03) 100%); }
+	93.33% { background: radial-gradient(circle at center, rgba(215, 189, 226, 0.15) 0%, rgba(215, 189, 226, 0.08) 50%, rgba(215, 189, 226, 0.03) 100%); }
+	100% { background: radial-gradient(circle at center, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.08) 50%, rgba(255, 255, 255, 0.03) 100%); }
+}
+
+/* 时钟样式 */
+#canvas {
+	border: 2px solid rgba(255, 255, 255, 0.3);
+	border-radius: 15px;
+	background: radial-gradient(circle at center, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.08) 50%, rgba(255, 255, 255, 0.03) 100%);
+	backdrop-filter: blur(10px);
+	box-shadow: 
+		0 0 20px rgba(255, 255, 255, 0.1),
+		inset 0 0 20px rgba(255, 255, 255, 0.05);
+	transition: all 0.3s ease;
+	/* 添加动态颜色动画 */
+	animation: 
+		clockBorderColor 15s linear infinite,
+		clockBackgroundColor 15s linear infinite;
+}
+
+#canvas:hover {
+	border-color: rgba(255, 255, 255, 0.6);
+	background: radial-gradient(circle at center, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.04) 100%);
+	box-shadow: 
+		0 0 30px rgba(255, 255, 255, 0.25),
+		inset 0 0 25px rgba(255, 255, 255, 0.08);
+	transform: translateY(-2px);
+	/* 悬停时暂停动画，保持当前颜色 */
+	animation-play-state: paused;
+}
+
 /* 响应式设计 */
 @media screen and (max-width: 768px) {
 	.contact-icons-container {
@@ -1025,6 +1091,12 @@ a {
 	.wechat-qr img {
 		width: 80px;
 		height: 80px;
+	}
+	
+	/* 移动端时钟样式调整 */
+	#canvas {
+		border-width: 1px;
+		border-radius: 10px;
 	}
 }
 

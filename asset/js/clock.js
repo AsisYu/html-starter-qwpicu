@@ -15,17 +15,24 @@
   var f;
   var o = [];
   const v = [
-    "#ffffff",
-    "#0099CC",
-    "#AA66CC",
-    "#9933CC",
-    "#99CC00",
-    "#669900",
-    "#FFBB33",
-    "#FF8800",
-    "#FF4444",
-    "#CC0000",
+    "#ffffff",  // 白色
+    "#FF6B6B",  // 珊瑚红
+    "#4ECDC4",  // 青绿色
+    "#45B7D1",  // 天蓝色
+    "#96CEB4",  // 薄荷绿
+    "#FFEAA7",  // 温暖黄
+    "#DDA0DD",  // 梅花紫
+    "#98D8C8",  // 海绿色
+    "#F7DC6F",  // 金黄色
+    "#BB8FCE",  // 淡紫色
+    "#85C1E9",  // 浅蓝色
+    "#F8C471",  // 橙色
+    "#82E0AA",  // 浅绿色
+    "#F1948A",  // 粉红色
+    "#D7BDE2",  // 薰衣草色
   ];
+  var currentColorIndex = 0;
+  var lastSecond = -1;
   var h = [];
   var u = [
     [
@@ -163,13 +170,21 @@
   ];
   function l(t) {
     var a = [];
-    f.fillStyle = "#ffffff";
     var r = new Date();
+    var currentSecond = r.getSeconds();
+    
+    // 每秒更换颜色
+    if (currentSecond !== lastSecond) {
+      currentColorIndex = (currentColorIndex + 1) % v.length;
+      lastSecond = currentSecond;
+    }
+    
+    f.fillStyle = v[currentColorIndex];
     var e = 70,
       o = 30;
-    var v = r.getHours();
-    var u = Math.floor(v / 10);
-    var l = v % 10;
+    var v_hours = r.getHours();
+    var u = Math.floor(v_hours / 10);
+    var l = v_hours % 10;
     a.push({ num: u });
     a.push({ num: l });
     a.push({ num: 10 });
@@ -216,7 +231,7 @@
           var h = {
             offsetX: t.offsetX + r + r * 2 * f,
             offsetY: 30 + r + r * 2 * e,
-            color: v[Math.floor(Math.random() * v.length)],
+            color: v[currentColorIndex],
             g: 1.5 + Math.random(),
             vx: Math.pow(-1, Math.ceil(Math.random() * 10)) * 4 + Math.random(),
             vy: -5,
